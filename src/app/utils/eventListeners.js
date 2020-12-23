@@ -7,7 +7,7 @@ export default () => {
   search.addEventListener('submit', (e) => {
     e.preventDefault();
     const cityValue = document.querySelector('.search__field').value;
-    getLocationAsync(`http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=92594fce9e86f115744b4eb9ba617aaa&units=metric`)
+    getLocationAsync(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=92594fce9e86f115744b4eb9ba617aaa&units=metric`)
       .then((data) => {
         // modifying the dom with the temperature we got.
         parseRequestData(data);
