@@ -36,7 +36,7 @@ const showPosition = (position) => {
     .then(
       (data) => {
         // getting the temperature by city name generated in the last step
-        getLocationAsync(`http://api.openweathermap.org/data/2.5/weather?q=${data.principalSubdivision}&appid=92594fce9e86f115744b4eb9ba617aaa&units=metric`)
+        getLocationAsync(`https://api.openweathermap.org/data/2.5/weather?q=${data.principalSubdivision}&appid=92594fce9e86f115744b4eb9ba617aaa&units=metric`)
           .then((data) => {
             // modifying the dom with the temperature we got.
             parseRequestData(data);
