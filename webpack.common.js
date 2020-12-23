@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   entry: {
     main: './src/app/index.js',
@@ -20,6 +18,18 @@ module.exports = {
             outputPath: 'imgs',
           },
         },
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
+            },
+          },
+        ],
       },
     ],
   },
