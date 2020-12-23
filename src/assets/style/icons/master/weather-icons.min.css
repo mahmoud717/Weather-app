@@ -1,3 +1,4 @@
+/* stylelint-disable  */
 /*!
  *  Weather Icons 2.0.10
  *  Updated November 1, 2020
@@ -340,16 +341,22 @@
 .wi-forecast-io-hail::before { content: "\f015"; }
 .wi-forecast-io-thunderstorm::before { content: "\f01e"; }
 .wi-forecast-io-tornado::before { content: "\f056"; }
+
 .wi-wmo4680-0::before,
 .wi-wmo4680-00::before { content: "\f055"; }
+
 .wi-wmo4680-1::before,
 .wi-wmo4680-01::before { content: "\f013"; }
+
 .wi-wmo4680-2::before,
 .wi-wmo4680-02::before { content: "\f055"; }
+
 .wi-wmo4680-3::before,
 .wi-wmo4680-03::before { content: "\f013"; }
+
 .wi-wmo4680-4::before,
 .wi-wmo4680-04::before { content: "\f014"; }
+
 .wi-wmo4680-5::before,
 .wi-wmo4680-05::before { content: "\f014"; }
 .wi-wmo4680-10::before { content: "\f014"; }
