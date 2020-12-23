@@ -29,12 +29,12 @@ export default () => {
     timeFormat = 'pm';
   }
   let minutesZero = 0;
-  if (date.getMinutes() > 10) {
+  if (date.getMinutes() >= 10) {
     minutesZero = '';
   }
 
   let hoursZero = 0;
-  if (hoursFormat > 10) {
+  if (hoursFormat >= 10) {
     hoursZero = '';
   }
   time.innerHTML = `${hoursZero}${hoursFormat}:${minutesZero}${date.getMinutes()}${timeFormat} `;
