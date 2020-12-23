@@ -19,6 +19,12 @@ export default () => {
         // update weather condition
         document.querySelector('.climate-status').innerHTML = data.weather[0].description;
         // remove the error if existed
+        console.log(data);
+        if (state[state.length - 1] === 'n') {
+          document.querySelector('body').className = 'night';
+        } else {
+          document.querySelector('body').className = 'day';
+        }
 
         if (document.querySelector('.error')) {
           document.querySelector('.error').remove();
