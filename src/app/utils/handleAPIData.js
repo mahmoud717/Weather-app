@@ -2,7 +2,7 @@
 export default (data) => {
   if (!document.querySelector('.show-data')) {
     const showData = document.querySelector('.temperature');
-    showData.classList.add('show-data');
+    showData.classList.add('show-data', 'c');
     showData.innerText = `${(Math.round(data.main.temp))} °C`;
   } else {
     document.querySelector('.show-data').innerHTML = `${(Math.round(data.main.temp))} °C`;

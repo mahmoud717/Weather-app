@@ -1,3 +1,4 @@
+import { te } from 'date-fns/locale';
 import getLocationAsync from './CallAPI';
 import parseRequestData, { displayCityName } from './handleAPIData';
 import displayWeatherIcon from './displayWeatherIcon';
@@ -29,5 +30,29 @@ export default () => {
           document.querySelector('.error').remove();
         }
       });
+  });
+};
+
+export const tempConvert = () => {
+  const temp = document.querySelector('.temperature');
+  temp.addEventListener('click', () => {
+    if (temp.classList.contains('c')) {
+      temp.classList.remove('c');
+      temp.classList.add('f');
+      let degree = temp.innerText;
+      degree = degree.replace(/\D/g, '');
+      // eslint-disable-next-line radix
+      degree = parseInt(degree);
+      temp.innerHTML = `${Math.round((degree * (9 / 5)) + 32)}°F`;
+    } else {
+      temp.classList.remove('f');
+      temp.classList.add('c');
+      let degree = temp.innerText;
+      degree = degree.replace(/\D/g, '');
+      console.log(degree, temp.innerText);
+      // eslint-disable-next-line radix
+      degree = parseInt(degree);
+      temp.innerHTML = `${Math.round((degree - 32) * (5 / 9))}°C`;
+    }
   });
 };
