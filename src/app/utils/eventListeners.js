@@ -49,7 +49,6 @@ export const tempConvert = () => {
       temp.classList.add('c');
       let degree = temp.innerText;
       degree = degree.replace(/\D/g, '');
-      console.log(degree, temp.innerText);
       // eslint-disable-next-line radix
       degree = parseInt(degree);
       temp.innerHTML = `${Math.round((degree - 32) * (5 / 9))}°C`;
